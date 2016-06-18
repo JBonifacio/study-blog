@@ -1,21 +1,19 @@
 <?php
 
+// Creates postgres db connections
 class Connection
 {
+    // array of pg_connect() arguments and values
     private $connectionSettings = array(
-        "host" => localhost,
-        // "port" => ,
-        "dbname" => vagrant,
-        // "user" => ,
+        "host" => "localhost",
+        "dbname" => "vagrant",
+        "user" => "vagrant",
+        "password" => "vagrant",
         );
-    // private $host   = '127.0.0.1';
-    // private $port   = '5432';
-    // private $dbname = 'vagrant';
-    // private $user   = 'vagrant';
-    // private $password = NULL;
     private $connectionString = null;
     private $connection;
 
+    // up instantiation, sets values to var connectString
     public function __construct()
     {
         $string = NULL;
@@ -27,13 +25,20 @@ class Connection
         $this->connectionString = $string;
     }
 
-    public function connectDB()
+    // connects to db
+    private function connectDB()
     {
         $this->connection = pg_connect($this->connectionString);
-
         return $this;
     }
 
+    // echos db connection for testing
+    public function getConnectDB()
+    {
+        echo var_dump($this->connectDB());
+    }
+
+    // checks if a conection exists
     public function check()
     {
         if (!$this->connection) {
@@ -46,7 +51,8 @@ class Connection
         return true;
     }
 
-    public function get()
+    // spits out connection string
+    public function getConnectionString()
     {
         return $this->connectionString;
     }
