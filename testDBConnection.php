@@ -19,7 +19,7 @@
     <h2>Connection Settings</h2>
     <p>
         <?php
-            echo $test->get();
+            echo $test->getConnectionString();
         ?>
     </p>
     <h2>Attempt</h2>
