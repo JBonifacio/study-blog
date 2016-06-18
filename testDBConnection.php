@@ -11,6 +11,7 @@
 <html>
 <head>
     <h1>DB Connection Test Page</h1>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
     <p> 
