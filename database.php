@@ -3,10 +3,10 @@
 class Connection
 {
     private $connectionSettings = array(
-        "host" => localhost,
-        "dbname" => vagrant,
-        "user" => vagrant,
-        "password" => vagrant,
+        "host" => "localhost",
+        "dbname" => "vagrant",
+        "user" => "vagrant",
+        "password" => "vagrant",
         );
     private $connectionString = null;
     private $connection;
