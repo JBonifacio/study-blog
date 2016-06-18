@@ -2,18 +2,29 @@
 
 class Connection
 {
-
-    private $host   = '127.0.0.1';
-    private $port   = '5432';
-    private $dbname = 'vagrant';
-    private $user   = 'vagrant';
+    private $connectionSettings = array(
+        "host" => localhost,
+        // "port" => ,
+        "dbname" => vagrant,
+        // "user" => ,
+        );
+    // private $host   = '127.0.0.1';
+    // private $port   = '5432';
+    // private $dbname = 'vagrant';
+    // private $user   = 'vagrant';
     // private $password = NULL;
     private $connectionString = null;
     private $connection;
 
     public function __construct()
     {
-        $this->connectionString = "host=".$this->host." port=".$this->port." dbname=".$this->dbname." user=".$this->user;
+        $string = NULL;
+        foreach ($this->connectionSettings as $arg => $val) {
+            if(!empty($val)) {
+                $string .= $arg."=".$val." ";
+            }
+        }
+        $this->connectionString = $string;
     }
 
     public function connectDB()
