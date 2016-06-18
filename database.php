@@ -4,15 +4,10 @@ class Connection
 {
     private $connectionSettings = array(
         "host" => localhost,
-        // "port" => ,
         "dbname" => vagrant,
-        // "user" => ,
+        "user" => vagrant,
+        "password" => vagrant,
         );
-    // private $host   = '127.0.0.1';
-    // private $port   = '5432';
-    // private $dbname = 'vagrant';
-    // private $user   = 'vagrant';
-    // private $password = NULL;
     private $connectionString = null;
     private $connection;
 
@@ -27,11 +22,15 @@ class Connection
         $this->connectionString = $string;
     }
 
-    public function connectDB()
+    private function connectDB()
     {
         $this->connection = pg_connect($this->connectionString);
-
         return $this;
+    }
+
+    public function getConnectDB()
+    {
+        echo var_dump($this->connectDB());
     }
 
     public function check()

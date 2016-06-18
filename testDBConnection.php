@@ -22,6 +22,12 @@
             echo $test->get();
         ?>
     </p>
+    <h2>Attempt</h2>
+    <p>
+        <?php
+            $test->getConnectDB();
+        ?>
+    </p>
     <h2>Result</h2>
     <p>
         <?php
