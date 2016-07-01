@@ -2,13 +2,14 @@
 
 <?php
     require('generateForm.php');
+    require('generateHeader.php');
 ?>
 
 <html>
-    <head>
-        <h1>Create User:</h1>
-        <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    </head>
+    <?php
+        $h = new generateHeader('Create New User');
+        $h->insertHeader();
+    ?>
     <body>
         <?php
             $u = new generateForm(
