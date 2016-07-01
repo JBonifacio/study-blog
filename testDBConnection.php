@@ -23,8 +23,11 @@
             echo $test->getConnectionString();
         ?>
     </p>
-    <h2>Attempt</h2>
+    <h2>Debugging Info</h2>
     <p>
+        Debugging info below will show what is being passed via PHP.
+    </p>
+    <p class="debug">
         <?php
             $test->getConnectDB();
         ?>
@@ -33,7 +36,7 @@
     <p>
         <?php
             $result = $test->check(); 
-            echo $result;
+            // echo $result;
         ?>
     </p>
 </body>
