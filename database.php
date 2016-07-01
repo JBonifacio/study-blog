@@ -26,7 +26,7 @@ class Connection
     }
 
     // connects to db
-    private function connectDB()
+    protected function connectDB()
     {
         $this->connection = pg_connect($this->connectionString);
         return $this;
@@ -47,7 +47,7 @@ class Connection
 
             return false;
         }
-
+        echo "All is well!";
         return true;
     }
 
