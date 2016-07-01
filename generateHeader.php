@@ -18,7 +18,7 @@ class generateHeader
         $stylesheet = $this->stylesheet;
         echo '
             <head>
-                <h1>'.$header.':</h1>
+                <h1>'.$header.'</h1>
                 <link rel="stylesheet" type="text/css" href="'.$stylesheet.'">
             </head>
         ';
