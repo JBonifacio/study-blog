@@ -26,7 +26,7 @@ class Connection
     }
 
     // connects to db
-    protected function connectDB()
+    public function connectDB()
     {
         $this->connection = pg_connect($this->connectionString);
         return $this;

@@ -3,6 +3,7 @@
 <?php
     require('generateForm.php');
     require('generateHeader.php');
+    require('insertNewUser.php');
 ?>
 
 <html>
@@ -26,5 +27,11 @@
                 );
             $u->generateForm();
         ?>
+    <h2>Debug Nonsense</h2>
+    <?php
+        $create = new newUser();
+        $db = $create->connectDB();
+        $create->check();
+    ?>
     </body>
 </html>

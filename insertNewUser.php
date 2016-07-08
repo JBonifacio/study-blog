@@ -2,13 +2,10 @@
 
 require('database.php');
 
-class newUser 
+class newUser extends Connection
 {
     function checkIfExists()
     {
-        $db = new Connect();
-        $db->connectDB();
-
         
     }
 }
