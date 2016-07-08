@@ -2,13 +2,15 @@
 
 <?php
     require('generateForm.php');
+    require('generateHeader.php');
+    require('insertNewUser.php');
 ?>
 
 <html>
-    <head>
-        <h1>Create User:</h1>
-        <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    </head>
+    <?php
+        $h = new generateHeader('Create New User');
+        $h->insertHeader();
+    ?>
     <body>
         <?php
             $u = new generateForm(
@@ -25,5 +27,11 @@
                 );
             $u->generateForm();
         ?>
+    <h2>Debug Nonsense</h2>
+    <?php
+        $create = new newUser();
+        $db = $create->connectDB();
+        $create->check();
+    ?>
     </body>
 </html>
