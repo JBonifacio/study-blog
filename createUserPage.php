@@ -31,6 +31,9 @@
     <?php
         $create = new newUser();
         $db = $create->connectDB();
+
+        $create-> checkIfExists(1,1);
+
         $create->check();
     ?>
     </body>

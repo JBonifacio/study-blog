@@ -32,6 +32,12 @@ class Connection
         return $this;
     }
 
+    // run a query
+    public function runQuery($query)
+    {
+        pg_query($query);
+    }
+
     // echos db connection for testing
     public function getConnectDB()
     {
