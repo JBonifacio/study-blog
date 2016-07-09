@@ -2,10 +2,11 @@
 
 require('database.php');
 
-class newUser extends Connection
+class newUser
 {
     function checkIfExists($username,$email)
     {
+        
         $query = "
             SELECT *
             FROM users
