@@ -35,7 +35,7 @@ class Connection
     // run a query
     public function runQuery($query)
     {
-        pg_query($query);
+        return pg_query($query);
     }
 
     // closed db connection

@@ -32,9 +32,9 @@
         $create = new newUser();
         $db = $create->connectDB();
 
-        $create-> checkIfExists(1,1);
+        $create-> checkIfExists('vagrant','vagrant@vagrant.net');
 
-        $create->check();
+        $create->closeConnection();
     ?>
     </body>
 </html>

@@ -2,7 +2,7 @@
 
 require('database.php');
 
-class newUser
+class newUser extends Connection
 {
     function checkIfExists($username,$email)
     {
@@ -14,7 +14,7 @@ class newUser
             OR email = '$email'
         ";
         echo $query;
-        // $this->runQuery($query);
+        $this->runQuery($query);
 
     }
 }
