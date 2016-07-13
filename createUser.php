@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <?php
-    require('generateForm.php');
-    require('generateHeader.php');
+    require('generateHtml/generateForm.php');
+    require('generateHtml/generateHead.php');
     require('insertNewUser.php');
 ?>
 

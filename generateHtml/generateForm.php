@@ -14,7 +14,7 @@ class generateForm
     {
         echo '
             <div class="form">
-            <form id="createUser" action="createUser.php" method="post" accept-charset="UTF-8">
+            <form id="createUser" action="../createUser.php" method="post" accept-charset="UTF-8">
                 <fieldset >
                     <legend align="center">User Details</legend>
                     <input type="hidden" name="submitted" id="submitted" value="1"/>
