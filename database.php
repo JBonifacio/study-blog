@@ -32,6 +32,18 @@ class Connection
         return $this;
     }
 
+    // run a query
+    public function runQuery($query)
+    {
+        return pg_query($query);
+    }
+
+    // closed db connection
+    public function closeConnection()
+    {
+        pg_close($this->connection);
+    }
+
     // echos db connection for testing
     public function getConnectDB()
     {

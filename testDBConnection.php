@@ -41,3 +41,7 @@
     </p>
 </body>
 </html>
+
+<?php
+    $test->closeConnection();
+?>

@@ -31,7 +31,10 @@
     <?php
         $create = new newUser();
         $db = $create->connectDB();
-        $create->check();
+
+        $create-> checkIfExists('vagrant','vagrant@vagrant.net');
+
+        $create->closeConnection();
     ?>
     </body>
 </html>

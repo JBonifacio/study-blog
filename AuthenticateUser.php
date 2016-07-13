@@ -2,7 +2,7 @@
 
 require('database.php');
 
-class Authenticate {
+class AuthenticateUser {
 
     function Login()
     {
