@@ -25,10 +25,10 @@
     </p>
     <h2>Debugging Info</h2>
     <p>
-        Debugging info below will show what is being passed via PHP.
+        <button type="button" onclick="document.getElementById('demo').style.display='block'">Click to show debug info.</button>
     </p>
-    <p class="debug">
-        <?php
+    <p class="debug" id="demo" style="display:none">
+            <?php
             $test->getConnectDB();
         ?>
     </p>
