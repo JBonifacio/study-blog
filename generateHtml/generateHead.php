@@ -1,6 +1,6 @@
 <?php
 
-class generateHeader
+class generateHead
 {
     private $stylesheet = 'stylesheet.css';
     private $stylesheetAlt = null;
@@ -12,15 +12,18 @@ class generateHeader
         $this->h1 = $arg;
     }
 
-    public function insertHeader()
+    public function insertHead()
     {
         $header = $this->h1;
         $stylesheet = $this->stylesheet;
-        echo '
+
+        $html = '
             <head>
-                <h1>'.$header.'</h1>
+                <title>'.$header.'</title>
                 <link rel="stylesheet" type="text/css" href="'.$stylesheet.'">
             </head>
         ';
+
+        echo $html;
     }
 }

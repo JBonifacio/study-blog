@@ -3,13 +3,17 @@
 <?php
     require('generateHtml/generateForm.php');
     require('generateHtml/generateHead.php');
+    require('generateHtml/generateHeader.php');
     require('insertNewUser.php');
 ?>
 
 <html>
     <?php
-        $h = new generateHeader('Create New User');
-        $h->insertHeader();
+        $head = new generateHead('Create New User');
+        $head->insertHead();
+
+        $header = new generateHeader('Create New User','This page is for creating a new user.');
+        $header->insertHeader();
     ?>
     <body>
         <?php
