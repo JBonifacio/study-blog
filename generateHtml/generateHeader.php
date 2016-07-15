@@ -6,9 +6,9 @@
  * Time: 1:13 PM
  */
 
-
 class generateHeader
 {
+    private $webPageTitle = 'Study Blog';
     private $header = NULL;
     private $subtitle = NULL;
 
@@ -21,6 +21,7 @@ class generateHeader
     public function insertHeader()
     {
         $html = NULL;
+        $htmlTitle = $this->webPageTitle;
         $htmlHeader = $this->header;
         $htmlSubtitle = $this->subtitle;
 
@@ -32,7 +33,10 @@ class generateHeader
         {
             $html = '
                 <header>
-                    <h1>'.$htmlHeader.'</h1>
+                    <h1>'.$htmlTitle.'</h1>
+                    <div id="subheader">
+                        <h2>'.$htmlHeader.'</h2>
+                    </div>
                 </header>
             ';
 
@@ -42,8 +46,11 @@ class generateHeader
         {
             $html = '
                 <header>
-                    <h1>'.$htmlHeader.'</h1>
-                    <p class="headerSubtitle">'.$htmlSubtitle.'</p>
+                    <h1>'.$htmlTitle.'</h1>
+                    <div id="subheader">
+                        <h2>'.$htmlHeader.'</h2>
+                        <p class="headerSubtitle">'.$htmlSubtitle.'</p>
+                    </div>
                 </header>
             ';
 

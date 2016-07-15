@@ -1,6 +1,7 @@
 body {
     font-family: Helvetica;
     background-color: #e6e6e6;
+    margin-top: 0px;
 }
 
 h1 {
@@ -14,29 +15,57 @@ h2 {
 }
 
 p {
-    margin: 20px;
+    font-family: Helvetica;
+}
+
+#wrapper {
+    width: 1080px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+header {
+    background-color: lightgray;
+    padding: 15px;
+}
+
+#subheader {
+    padding-top: 10px;
+    border-top-style: solid;-top
+    border-top-color: black;
+    border-top-width: 1px;
 }
 
 header h1 {
-    margin-bottom: 2px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+header h2 {
+    margin-top: 0px;
+    margin-bottom: 5px;
 }
 
 header p.headerSubtitle {
-    margin: 0px;
-    padding-left: 2px;
-    padding-bottom: 20px;
+    margin-top: 0px;
+    margin-left: 5px;
+    margin-bottom: 0px;
     font-style: italic;
+    font-size: 14px;
+}
+
+div.content {
+    padding: 20px;
 }
 
 p.debug {
     font-family: Inconsolata;
-    /*border-style: solid;*/
-    /*border-width: 1px;*/
     border-radius: 5px;
     background-color: #bfbfbf;
     color: #333333;
     padding: 5px;
 }
+
 div.form {
     width: 300px;
     clear: both;
@@ -49,4 +78,17 @@ div.form div.formField {
     padding-bottom: 10px;
     padding-left: 5px;
     padding-right: 5px;
+}
+
+footer {
+    background-color: darkgray;
+    text-align: center;
+}
+
+footer div {
+    padding: 20px;
+}
+
+footer nav a:link {
+        color: darkred;
 }
